@@ -1,0 +1,37 @@
+$container-desktop-padding: 0;
+$container-laptop-padding: 30px;
+$container-tablet-padding: 20px;
+$container-mobile-padding: 20px;
+
+@mixin container {
+  max-width: 1720px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include mobile {
+    padding-left: $container-mobile-padding;
+    padding-right: $container-mobile-padding;
+  }
+
+  @include tablet {
+    padding-left: $container-tablet-padding;
+    padding-right: $container-tablet-padding;
+  }
+  
+  @include laptop {
+    padding-left: $container-laptop-padding;
+    padding-right: $container-laptop-padding;
+  }
+
+  @include desktop {
+    padding-left: $container-desktop-padding;
+    padding-right: $container-desktop-padding;
+  }
+}
+
+// font-sizes
+$fs-1: 64px;
+$fs-2: 32px;
+$fs-3: 24px;
+$fs-4: 20px;
+$fs-5: 16px;

@@ -1,0 +1,232 @@
+@use "../../styles/style" as *;
+
+.productCard {
+  display: flex;
+  box-shadow: unset;
+}
+
+.smallProductCard {
+  flex-direction: row;
+  width: 347px; 
+  height: 130px;
+  padding: 11px 15px;
+ 
+
+  border-radius: 30px; 
+  background-color: $color-custom-white;
+}
+
+.mediumProductCard {
+  flex-direction: column;
+  width: 262px;
+  height: 350px;
+  padding: 20px;
+
+  border-radius: 30px;
+  border: 1px dashed $color-secondary;
+  background-color: $color-default-white;
+}
+
+.largeProductCard {
+  width: 100%;
+  height: unset;
+  
+  max-width: 1137px;
+  max-height: 531px;
+  padding: 20px;
+  padding-right: 0;  
+
+  border-radius: 30px;
+  border: 1px dashed $color-secondary;
+  background-color: $color-default-white;
+
+  @include large-desktop {
+    max-height: 560px;
+  }
+}
+
+.imgWrapper {
+  width: 100%;
+  height: 200px;
+}
+
+.smallImgWrapper {
+  width: 108px;
+  height: 108px;
+}
+
+.largeImgWrapper {
+  width: 400px;
+  height: auto;
+  padding-bottom: 90px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    width: 400px !important;
+  }
+}
+
+.productImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.innerWrapper {
+  flex-grow: 1;
+
+  padding-top: 10px
+}
+
+.smallInnerWrapper {
+  max-width: 184px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.largeInnerWrapper {
+  padding-top: 60px; 
+  padding-left: 60px;
+  padding-bottom: 30px;
+}
+
+.cardContent {
+  padding: 0; 
+}
+
+.smallProductName {
+  font-family: $font-poppins;
+  font-size: $fs-6;
+  line-height: 1.5;  
+  font-weight: $fw-regular;
+  color: $color-secondary;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.mediumProductName {
+  font-family: $font-poppins;
+  font-size: $fs-5;
+  line-height: 1.2;  
+  font-weight: $fw-medium;
+  color: $color-secondary;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.largeProductName {
+  font-family: $font-poppins;
+  font-size: $fs-2;
+  line-height: 1.5;
+  font-weight: $fw-regular;
+  color: $color-secondary;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  @include large-desktop {
+    font-size: $fs-1;
+  }
+}
+
+.smallProductPrice {
+  font-family: $font-poppins;
+  font-size: $fs-5;
+  line-height: 1.2;
+  font-weight: $fw-medium;
+  color: $color-secondary;
+}
+
+.mediumProductPrice {
+  font-family: $font-poppins;
+  font-size: $fs-4;
+  line-height: 1.2;  
+  font-weight: $fw-medium;
+  color: $color-secondary;
+}
+
+.largeProductPrice {
+  font-family: $font-poppins;
+  font-size: $fs-2;
+  line-height: 1.2;
+  font-weight: $fw-medium;
+  color: $color-secondary;
+
+  @include large-desktop {
+    font-size: $fs-1;
+  }
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 0;  
+  margin-top: auto;
+}
+
+.smallCardActions {
+  margin-top: 10px;
+}
+
+.largeCardActions {
+  margin-top: 60px;
+}
+
+.favoritesBtn {
+  @include transition;
+
+  width: 31px;
+  height: 31px;
+  min-width: unset;
+  padding: unset;
+  
+  border: none;
+  border-radius: 8px;
+  background-image: url('/icons/heart-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.largeFavoritesBtn {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 8px;
+
+
+  @include large-desktop {
+    width: 96px;
+    height: 96px;
+  
+    border-radius: 16px;
+  }
+ 
+  background-size: contain;
+} 
+
+.favorite {
+  background-color: $color-secondary;
+}

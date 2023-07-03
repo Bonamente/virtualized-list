@@ -1,0 +1,22 @@
+@use "../../styles/style" as *;
+
+.appBar {
+  background-color: $color-primary;
+  border-bottom: 1px solid $color-default-black;
+  box-shadow: unset;
+}
+
+.container {
+  @include container
+}
+
+.title {
+  @include page-title;  
+}
+
+.toolbar {
+  justify-content: end;
+
+  min-height: 100px;
+  padding: 0;
+}

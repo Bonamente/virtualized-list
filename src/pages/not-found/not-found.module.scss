@@ -13,20 +13,19 @@
 }
 
 .title {
-  @include page-title;
-  
+  @include page-title;  
 }
 
 .link {
- @include page-title;
- @include transition;
+  @include page-title;
+  @include transition;
 
- font-size: $fs-3;
- color: $color-primary;
- outline: none;
+  font-size: $fs-3;
+  color: $color-primary;
+  outline: none;
 
- &:hover,
- &:focus {
-  text-decoration: underline;
- }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }

@@ -18,6 +18,7 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({ name, imgUrl }) => (
         width: 650,
         height: 650,
       },
+      enlargedImageClassName: `${styles.largeProductImg}`,
       enlargedImageContainerDimensions: {
         width: '135%',
         height: '115%',

@@ -1,0 +1,44 @@
+@use "../../styles/style" as *;
+
+.productList {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  @include laptop {
+    display: block;
+    max-width: 1140px;
+    margin-left: auto;
+  }
+ 
+  height: 100vh;
+  padding-top: 100px;
+
+  & > div {
+    display: contents !important;
+
+    @include laptop {
+      display: block;
+    }
+  }
+}
+
+.message {
+  @include center-positioning;
+  @include page-title;  
+}
+
+.link {
+  @include transition;
+  outline: none;
+
+  div {
+    @include transition;
+  };
+ 
+  &:hover > div,
+  &:focus-within > div {    
+    transform: scale(1.015);
+  }
+ }

@@ -1,0 +1,86 @@
+@use "../../styles/style" as *;
+
+.wrapper {
+  width: 100%;
+  height: calc(100vh - 100px);
+
+  background-color: $color-custom-white; 
+}
+
+.wrapper2 {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+    background-color: $color-scrollbar;  
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: $color-primary;
+  }
+}
+
+.container {
+  @include container;
+
+  align-items: center;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: unset;
+  }
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+
+  @include laptop {
+    display: block;
+    
+    width: 32%;
+    max-width: 553px;
+  }
+}
+
+.favoritesContainer {
+  position: absolute;
+  top: 81px;
+  z-index: 10;
+
+  width: 95%; 
+
+  @include laptop {
+    position: absolute;  
+    top: 200px;
+    
+    width: unset;   
+  }
+}
+
+.main {  
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  padding-top: 250px;
+  
+  @include laptop {
+    display: block;
+    
+    flex-grow: 1;
+    justify-content: unset;
+
+    width: unset;
+    padding-top: unset; 
+  }
+}

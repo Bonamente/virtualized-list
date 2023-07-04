@@ -4,7 +4,7 @@ import styles from './header.module.scss';
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
-    <AppBar position="static" className={styles.appBar}>
+    <AppBar position="relative" className={styles.appBar}>
       <Container className={styles.container}>
         <Toolbar className={styles.toolbar}>
           <div className={styles.cube} />

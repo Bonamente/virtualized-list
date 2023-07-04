@@ -1,6 +1,8 @@
 @use "../../styles/style" as *;
 
 .appBar {
+  z-index: 15;
+
   background-color: $color-primary;
   border-bottom: 1px solid $color-default-black;
   box-shadow: unset;

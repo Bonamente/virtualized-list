@@ -1,0 +1,23 @@
+@use "../../styles/style" as *;
+
+.homePage {
+  width: 100%;
+
+  @include tablet {
+    width: unset;
+  }
+  
+  @include laptop {
+    width: 100%;    
+    padding-left: 16%
+  }
+
+  @include desktop {
+    padding-left: 10%;
+  }
+
+  @include large-desktop {
+    padding-left: unset;
+  }
+}
+

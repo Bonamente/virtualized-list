@@ -1,0 +1,24 @@
+@use "../../styles/style" as *;
+
+.productPage {
+  position: relative;
+
+  flex-direction: row;
+  justify-content: end;
+
+  width: 100%;
+  padding-top: 50px;
+  
+  @include laptop {
+    padding-top: 100px;
+  }
+
+  @include desktop {
+    padding-left: 60px;
+  }
+}
+
+.message {
+  @include center-positioning;
+  @include page-title;  
+}

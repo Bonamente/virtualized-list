@@ -1,10 +1,10 @@
-$container-desktop-padding: 0;
+$container-desktop-padding: 30px;
 $container-laptop-padding: 30px;
 $container-tablet-padding: 20px;
 $container-mobile-padding: 20px;
 
 @mixin container {
-  max-width: 1720px;
+  max-width: 1780px;
   width: 100%;
   margin: 0 auto;
 
@@ -31,7 +31,8 @@ $container-mobile-padding: 20px;
 
 // font-sizes
 $fs-1: 64px;
-$fs-2: 32px;
-$fs-3: 24px;
-$fs-4: 20px;
-$fs-5: 16px;
+$fs-2: 48px;
+$fs-3: 32px;
+$fs-4: 24px;
+$fs-5: 20px;
+$fs-6: 16px;

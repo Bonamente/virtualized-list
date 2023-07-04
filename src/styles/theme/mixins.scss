@@ -1,48 +1,22 @@
 @mixin page-title {
   font-family: $font-anek-telugu;
-  font-size: $fs-2;
+  font-size: $fs-3;
+  line-height: 1.2;
   font-weight: $fw-semibold;
   color: $color-secondary;
   letter-spacing: 1.6px;
   text-transform: uppercase;
 }
 
-@mixin card-description {
-  font-family: $font-poppins;
-  font-size: $fs-4;  
-  font-weight: $fw-medium;
-  color: $color-secondary;
-}
-
-@mixin card-price {
-  font-family: $font-poppins;
-  font-size: $fs-3;  
-  font-weight: $fw-medium;
-  color: $color-secondary;
-}
-
-@mixin favorites-item-description {
-  font-family: $font-poppins;
-  font-size: $fs-5;  
-  font-weight: $fw-medium;
-  color: $color-secondary;
-}
-
-@mixin favorites-item-price {
-  font-family: $font-poppins;
-  font-size: $fs-4;
-  font-weight: $fw-medium;
-  color: $color-secondary;
-}
-
-@mixin product-text {
-  font-family: $font-poppins;
-  font-size: $fs-1;
-  font-weight: $fw-medium;
-  color: $color-secondary;
-}
-
 @mixin transition {
   transition: all 0.3s ease-out;
+}
+
+@mixin center-positioning {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%,-50%);
 }
 

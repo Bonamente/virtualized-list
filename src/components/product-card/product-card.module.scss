@@ -22,23 +22,49 @@
   height: 350px;
   padding: 20px;
 
-  border-radius: 30px;
-  border: 1px dashed $color-secondary;
+  border-radius: 30px; 
   background-color: $color-default-white;
+
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23414141FF' stroke-width='1' stroke-dasharray='14%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
 .largeProductCard {
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
   height: unset;
-  
-  max-width: 1137px;
-  max-height: 531px;
-  padding: 20px;
-  padding-right: 0;  
+  width: 100%;  
+  padding: 20px; 
 
   border-radius: 30px;
   border: 1px dashed $color-secondary;
   background-color: $color-default-white;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: unset;
+
+    height: unset;    
+    width: 100%;
+    padding: 20px;
+    padding-right: 0;
+    
+    border: none;
+    background-color: $color-custom-white;
+  }
+  
+  @include laptop {
+    max-width: 75%;
+    max-height: 531px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 85%;
+  }
+
+  @include desktop {
+    max-width: 1137px;
+  }
 
   @include large-desktop {
     max-height: 560px;
@@ -56,14 +82,26 @@
 }
 
 .largeImgWrapper {
-  width: 400px;
+  width: 250px;
   height: auto;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 
   & > div {
     display: flex;
     flex-direction: column;
-    width: 400px !important;
+    width: 250px !important;
+  }
+
+  @include desktop {
+    width: 400px;
+    height: auto;
+    padding-bottom: 90px;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      width: 400px !important;
+    }
   }
 }
 
@@ -81,15 +119,23 @@
 }
 
 .smallInnerWrapper {
-  max-width: 184px;
   padding-top: 15px;
   padding-left: 10px;
+
+  @include laptop {
+    max-width: 184px;
+  }   
 }
 
 .largeInnerWrapper {
-  padding-top: 60px; 
-  padding-left: 60px;
-  padding-bottom: 30px;
+  padding-top: 10px; 
+  padding-left: 10px;
+
+  @include desktop {
+    padding-top: 60px; 
+    padding-left: 60px;
+    padding-bottom: 30px;
+  }
 }
 
 .cardContent {
@@ -126,7 +172,7 @@
 
 .largeProductName {
   font-family: $font-poppins;
-  font-size: $fs-2;
+  font-size: $fs-3;
   line-height: 1.5;
   font-weight: $fw-regular;
   color: $color-secondary;
@@ -134,6 +180,14 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+
+  @include laptop {
+    font-size: $fs-4;
+  }
+
+  @include desktop {
+    font-size: $fs-2;
+  }
 
   @include large-desktop {
     font-size: $fs-1;
@@ -158,10 +212,14 @@
 
 .largeProductPrice {
   font-family: $font-poppins;
-  font-size: $fs-2;
+  font-size: $fs-3;
   line-height: 1.2;
   font-weight: $fw-medium;
   color: $color-secondary;
+
+  @include desktop {
+    font-size: $fs-2;
+  }
 
   @include large-desktop {
     font-size: $fs-1;
@@ -177,12 +235,17 @@
   margin-top: auto;
 }
 
-.smallCardActions {
+.smallCardActions {  
   margin-top: 10px;
 }
 
 .largeCardActions {
+  min-width: 250px;
   margin-top: 60px;
+
+  @include laptop {
+    min-width: unset;
+  }
 }
 
 .favoritesBtn {
@@ -211,11 +274,16 @@
 }
 
 .largeFavoritesBtn {
-  width: 50px;
-  height: 50px;
-
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+ 
   border-radius: 8px;
 
+  @include desktop {
+    width: 50px;
+    height: 50px;
+  }
 
   @include large-desktop {
     width: 96px;
